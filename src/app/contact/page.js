@@ -1,6 +1,21 @@
+"use client";
+
+import * as React from "react"
+import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
+import { Check } from "lucide-react"
+
+import { cn } from "@/lib/utils"
+
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
+import { Button } from "@/components/ui/button"
+import { Bar, BarChart } from "recharts"
+
+
+
+
+
 export default function ContactUs() {
     async function SubmitForm(formData) {
-       "use server";
         const formFields = {
             email: formData.get("email"),
             message: formData.get("message"),
@@ -27,7 +42,13 @@ export default function ContactUs() {
                         <label htmlFor="message" className="block text-gray-700 font-medium">Message</label>
                         <textarea id="message" name="message" rows="4" className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring focus:ring-gray-400 focus:outline-none"></textarea>
                     </div>
-                    <button type="submit" className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">Submit</button>
+                    {/* <button type="submit" className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">Submit</button> */}
+                                    <div> 
+                    <Button>Submit</Button>
+
+                    </div>
+
+                 
                 </form>
             </div>
         </main>
